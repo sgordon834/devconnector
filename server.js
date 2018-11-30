@@ -8,7 +8,7 @@ const passport = require('passport');
 const db = require('./config/keys').mongoURI;
 
 const users = require('./routes/api/users');
-const profiles = require('./routes/api/profiles');
+const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
 //Connect to MongoDB
@@ -39,7 +39,7 @@ app.use(bodyParser.json());
 
 //Use Routes
 app.use('/api/users', users);
-app.use('/api/profiles', profiles);
+app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
 const port = process.env.PORT || 5000;
